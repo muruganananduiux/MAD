@@ -1,0 +1,16 @@
+export const IMAGES = {
+  heroChild: 'https://images.pexels.com/photos/7275812/pexels-photo-7275812.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
+  heroChild2: 'https://images.pexels.com/photos/16061710/pexels-photo-16061710.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
+  ruralFamily1: 'https://images.unsplash.com/photo-1644293014170-fa2ef378157e?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjAzMzl8MHwxfHNlYXJjaHwxfHxJbmRpYW4lMjBydXJhbCUyMGZhbWlseXxlbnwwfHx8fDE3ODMwMDYzOTF8MA&ixlib=rb-4.1.0&q=85',
+  ruralFamily2: 'https://images.unsplash.com/photo-1768518354624-98338b3ea30f?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjAzMzl8MHwxfHNlYXJjaHwzfHxJbmRpYW4lMjBydXJhbCUyMGZhbWlseXxlbnwwfHx8fDE3ODMwMDYzOTF8MA&ixlib=rb-4.1.0&q=85',
+  ruralFamily3: 'https://images.unsplash.com/photo-1776507178418-b9b689a1ad73?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjAzMzl8MHwxfHNlYXJjaHwyfHxJbmRpYW4lMjBydXJhbCUyMGZhbWlseXxlbnwwfHx8fDE3ODMwMDYzOTF8MA&ixlib=rb-4.1.0&q=85',
+  charity1: 'https://images.unsplash.com/photo-1497486751825-1233686d5d80',
+  charity2: 'https://images.unsplash.com/photo-1635247054993-3346afdfd31e',
+  charity3: 'https://images.pexels.com/photos/5909876/pexels-photo-5909876.jpeg',
+  charity4: 'https://images.unsplash.com/photo-1524069290683-0457abfe42c3',
+  charity5: 'https://images.unsplash.com/photo-1542810634-71277d95dcbb',
+  edu1: 'https://images.unsplash.com/flagged/photo-1574097656146-0b43b7660cb6?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjAzMjh8MHwxfHNlYXJjaHw0fHxJbmRpYW4lMjBlZHVjYXRpb258ZW58MHx8fHwxNzgzMTI5OTM5fDA&ixlib=rb-4.1.0&q=85',
+  edu2: 'https://images.unsplash.com/photo-1522661067900-ab829854a57f?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjAzMjh8MHwxfHNlYXJjaHwzfHxJbmRpYW4lMjBlZHVjYXRpb258ZW58MHx8fHwxNzgzMTI5OTM5fDA&ixlib=rb-4.1.0&q=85',
+  woman1: 'https://images.pexels.com/photos/37145167/pexels-photo-37145167.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
+  woman2: 'https://images.pexels.com/photos/34061448/pexels-photo-34061448.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
+};
