@@ -1,0 +1,41 @@
+.about-heading{color:#2F6E5B;font-family:var(--font-serif,serif);font-size:28px;line-height:1.1;margin-top:6px}
+.about-timeline{position:relative;padding-left:48px}
+.timeline-line{position:absolute;left:24px;top:0;bottom:0;width:2px;background:#F3EBDD;border-radius:2px}
+.timeline-list{list-style:none;margin:0;padding:0}
+.timeline-item{position:relative;padding:28px 24px 28px 40px;display:flex}
+.timeline-dot{position:absolute;left:18px;top:36px;width:12px;height:12px;background:#EF6A3D;border-radius:999px;transform:translateY(-50%);transition:transform .3s ease}
+.timeline-content{transition:transform .3s ease}
+.timeline-year{color:#EF6A3D;font-weight:700;font-size:18px;margin-bottom:6px}
+.timeline-title{color:#2F6E5B;font-weight:700;font-size:18px;margin-bottom:6px}
+.timeline-desc{color:#4a4a44;font-size:14px}
+.timeline-item:hover .timeline-dot{transform:scale(1.14) translateY(-50%)}
+.timeline-item:hover .timeline-content{transform:translateX(6px)}
+
+/* Responsive spacing */
+@media (min-width:768px){
+  .timeline-item{padding:36px 24px 36px 56px}
+  .timeline-dot{top:50%}
+}
+@media (max-width:640px){
+  .about-timeline{padding-left:36px}
+  .timeline-line{left:18px}
+  .timeline-dot{left:12px}
+}
+
+/* Leadership */
+.leaders-grid{display:grid;grid-template-columns:repeat(1,1fr);gap:18px}
+.leader-card{background:white;border:1px solid #E7DFCF;border-radius:12px;overflow:hidden;box-shadow:0 6px 18px rgba(16,16,16,0.06);display:flex;flex-direction:column;align-items:stretch;transition:transform .28s ease,box-shadow .28s ease}
+.leader-img-wrap{width:100%;height:0;padding-bottom:75%;overflow:hidden;position:relative}
+.leader-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .4s ease}
+.leader-meta{padding:18px;text-align:center}
+.leader-name{color:#2F6E5B;font-weight:800;font-size:18px}
+.leader-role{color:#4a4a44;margin-top:6px;font-weight:500}
+.leader-card:hover{transform:translateY(-8px);box-shadow:0 14px 34px rgba(16,16,16,0.12)}
+.leader-card:hover .leader-img{transform:scale(1.06)}
+
+@media (min-width:768px){
+  .leaders-grid{grid-template-columns:repeat(2,1fr);gap:20px}
+}
+@media (min-width:1024px){
+  .leaders-grid{grid-template-columns:repeat(4,1fr);gap:24px}
+}

@@ -1,0 +1,10 @@
+export const CAUSES = [
+  { id: '01', name: 'Medical Emergency', slug: 'medical', description: 'Urgent surgeries, chemotherapy, transplants and hospital bills.', accent: true, count: '4,120 live', image: 'https://images.unsplash.com/photo-1648964388258-e71b58683ed0' },
+  { id: '02', name: 'Education & Scholarships', slug: 'education', description: 'School fees, books, laptops for bright students in need.', count: '2,860 live', image: 'https://images.pexels.com/photos/20556421/pexels-photo-20556421.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940' },
+  { id: '03', name: 'Disaster Relief', slug: 'disaster', description: 'Rebuilding homes and lives after floods, cyclones and quakes.', count: '480 live', image: 'https://images.pexels.com/photos/5909876/pexels-photo-5909876.jpeg' },
+  { id: '04', name: 'NGO & Nonprofit Support', slug: 'ngo', description: 'Sustained funding for verified grassroots nonprofits.', count: '312 partners', image: 'https://images.unsplash.com/photo-1542810634-71277d95dcbb' },
+  { id: '05', name: 'Animal Welfare', slug: 'animal', description: 'Rescue, shelter and treatment for injured and stray animals.', count: '740 live', image: 'https://images.unsplash.com/photo-1776876128514-c0317ff4bb8f' },
+  { id: '06', name: 'Environment', slug: 'environment', description: 'Tree plantation, clean rivers and community sustainability.', count: '390 live', image: 'https://images.unsplash.com/photo-1708592956177-d29b4b4ce348' },
+  { id: '07', name: 'Sports & Talent', slug: 'sports', description: 'Backing gifted athletes and artists from underserved homes.', count: '210 live', image: 'https://images.pexels.com/photos/32792749/pexels-photo-32792749.jpeg' },
+  { id: '08', name: 'Community Causes', slug: 'community', description: 'Local drives, temples, schools, and neighbourhood projects.', count: '1,540 live', image: 'https://images.unsplash.com/photo-1776507178418-b9b689a1ad73?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjAzMzl8MHwxfHNlYXJjaHwyfHxJbmRpYW4lMjBydXJhbCUyMGZhbWlseXxlbnwwfHx8fDE3ODMwMDYzOTF8MA&ixlib=rb-4.1.0&q=85' },
+];

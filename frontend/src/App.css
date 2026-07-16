@@ -1,34 +1,296 @@
-.App-logo {
-    height: 40vmin;
-    pointer-events: none;
+/* MAD clone base styles */
+
+.App {
+  min-height: 100vh;
+  background: #FBF6EE;
+  color: #1a1a1a;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-    .App-logo {
-        animation: App-logo-spin infinite 20s linear;
-    }
+.font-serif-italic {
+  font-family: 'Playfair Display', 'Cormorant Garamond', Georgia, serif;
+  font-style: italic;
+  font-weight: 500;
 }
 
-.App-header {
-    background-color: #0f0f10;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    font-size: calc(10px + 2vmin);
-    color: white;
+.font-serif {
+  font-family: 'Playfair Display', 'Cormorant Garamond', Georgia, serif;
 }
 
-.App-link {
-    color: #61dafb;
+.font-sans-body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
 }
 
-@keyframes App-logo-spin {
-    from {
-        transform: rotate(0deg);
-    }
-    to {
-        transform: rotate(360deg);
-    }
+/* colour tokens */
+:root {
+  --mad-cream: #FBF6EE;
+  --mad-cream-2: #F3EBDD;
+  --mad-ink: #14140F;
+  --mad-ink-2: #4a4a44;
+  --mad-orange: #EF6A3D;
+  --mad-orange-hover: #E25429;
+  --mad-green: #2F6E5B;
+  --mad-green-2: #2A5C4C;
+  --mad-line: #E7DFCF;
 }
+
+.btn-orange {
+  background: var(--mad-orange);
+  color: #fff;
+  padding: 12px 22px;
+  border-radius: 999px;
+  font-weight: 600;
+  font-size: 14px;
+  transition: background 0.18s ease, transform 0.18s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  border: none;
+  cursor: pointer;
+}
+.btn-orange:hover { background: var(--mad-orange-hover); }
+.btn-orange:active { transform: translateY(1px); }
+
+.btn-outline-ink {
+  background: transparent;
+  color: var(--mad-ink);
+  padding: 12px 22px;
+  border-radius: 999px;
+  font-weight: 600;
+  font-size: 14px;
+  border: 1.5px solid var(--mad-ink);
+  transition: background 0.18s ease, color 0.18s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+}
+.btn-outline-ink:hover { background: var(--mad-ink); color: #fff; }
+
+.btn-ghost {
+  background: transparent;
+  color: var(--mad-ink);
+  padding: 10px 16px;
+  border-radius: 999px;
+  font-weight: 500;
+  font-size: 14px;
+  transition: background 0.18s ease;
+  border: none;
+  cursor: pointer;
+}
+.btn-ghost:hover { background: rgba(20,20,15,0.06); }
+
+.section-eyebrow {
+  color: var(--mad-orange);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.grain-overlay {
+  position: relative;
+}
+.grain-overlay::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.06;
+  background-image: radial-gradient(rgba(0,0,0,0.6) 1px, transparent 1px);
+  background-size: 3px 3px;
+}
+
+/* image cause tile */
+.cause-tile {
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+  cursor: pointer;
+  display: block;
+  aspect-ratio: 4 / 5;
+  background: #1a1a17;
+  isolation: isolate;
+}
+.cause-tile__img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: grayscale(20%) contrast(1.02);
+  transition: transform 0.6s ease, filter 0.4s ease;
+  z-index: 0;
+}
+.cause-tile:hover .cause-tile__img {
+  transform: scale(1.08);
+  filter: grayscale(0%) contrast(1.05);
+}
+.cause-tile__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(20,20,15,0.15) 0%, rgba(20,20,15,0.35) 45%, rgba(20,20,15,0.88) 100%);
+  z-index: 1;
+  transition: background 0.3s ease;
+}
+.cause-tile:hover .cause-tile__overlay {
+  background: linear-gradient(180deg, rgba(239,106,61,0.10) 0%, rgba(20,20,15,0.45) 45%, rgba(20,20,15,0.92) 100%);
+}
+.cause-tile__body {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  color: #fff;
+  padding: 18px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.cause-tile__num {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-style: italic;
+  font-size: 15px;
+  color: rgba(255,255,255,0.7);
+}
+.cause-tile__icon {
+  width: 40px; height: 40px;
+  border-radius: 999px;
+  background: rgba(255,255,255,0.15);
+  backdrop-filter: blur(6px);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s ease;
+}
+.cause-tile:hover .cause-tile__icon { background: #EF6A3D; }
+.cause-tile__title {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 19px;
+  font-weight: 500;
+  line-height: 1.2;
+}
+.cause-tile__meta {
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #F3B58C;
+  font-weight: 600;
+  margin-top: 4px;
+}
+.cause-tile__arrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  font-weight: 600;
+  margin-top: 12px;
+  color: #fff;
+  opacity: 0;
+  transform: translateY(6px);
+  transition: opacity 0.25s ease, transform 0.25s ease;
+}
+.cause-tile:hover .cause-tile__arrow {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* legacy cause-card kept minimal (still used on Causes page) */
+.cause-card {
+  background: #fff;
+  border: 1px solid var(--mad-line);
+  border-radius: 8px;
+  padding: 18px 18px 22px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 148px;
+  position: relative;
+  overflow: hidden;
+}
+.cause-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 30px -12px rgba(20,20,15,0.18);
+  border-color: #d4c9b3;
+}
+.cause-card.accent {
+  background: var(--mad-green);
+  color: #fff;
+  border-color: var(--mad-green);
+}
+.cause-card.accent:hover { background: var(--mad-green-2); }
+
+.progress-track {
+  height: 6px;
+  background: var(--mad-cream-2);
+  border-radius: 999px;
+  overflow: hidden;
+}
+.progress-fill {
+  height: 100%;
+  background: var(--mad-orange);
+  border-radius: 999px;
+}
+
+.campaign-card {
+  background: #fff;
+  border: 1px solid var(--mad-line);
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  display: flex;
+  flex-direction: column;
+}
+.campaign-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 40px -18px rgba(20,20,15,0.25);
+}
+
+.link-underline {
+  position: relative;
+  color: var(--mad-orange);
+  font-weight: 600;
+}
+.link-underline::after {
+  content: '';
+  position: absolute;
+  left: 0; right: 0; bottom: -2px;
+  height: 1.5px;
+  background: currentColor;
+  transform-origin: left;
+  transition: transform 0.25s ease;
+}
+.link-underline:hover::after { transform: scaleX(0.6); }
+
+.nav-link {
+  color: var(--mad-ink);
+  font-size: 14px;
+  font-weight: 500;
+  padding: 8px 10px;
+  border-radius: 6px;
+  transition: color 0.15s ease;
+}
+.nav-link:hover { color: var(--mad-orange); }
+.nav-link.active { color: var(--mad-orange); }
+
+.hero-image {
+  filter: grayscale(15%) contrast(1.02);
+}
+
+.footer-link {
+  color: #4a4a44;
+  font-size: 14px;
+  transition: color 0.15s ease;
+  display: block;
+  padding: 4px 0;
+}
+.footer-link:hover { color: var(--mad-orange); }
+
+/* subtle fade-up */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.fade-up { animation: fadeUp 0.6s ease-out both; }
+
+/* remove default App-header centering */
